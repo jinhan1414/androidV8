@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        image-name: [androidV8]
+        image-name: [androidv8]
         image-version: [1.0]
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
