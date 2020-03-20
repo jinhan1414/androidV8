@@ -31,7 +31,6 @@ jobs:
         aliyun_username: ${{ secrets.Aliyun_Username }}
         aliyun_password: ${{ secrets.Aliyun_Password }}      
       run: |
-        sudo apt install git
         mkdir dock
         cd dock
         cp $GITHUB_WORKSPACE/Dockerfile ./
