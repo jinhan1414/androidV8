@@ -62,3 +62,5 @@ RUN echo y | \
 	else \
 		./build/install-build-deps.sh ; fi
 RUN git pull && gclient sync
+
+RUN wget https://raw.githubusercontent.com/jinhan1414/androidV8/master/buildAndroidV8.sh
