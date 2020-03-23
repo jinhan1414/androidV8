@@ -3,9 +3,7 @@
 build_platform=android-arm
 cp -r out.gn/x64.release out.gn/${build_platform}
 rm out.gn/${build_platform}/args.gn
-cd out.gn/${build_platform}/
-wget https://raw.githubusercontent.com/jinhan1414/J2V8/master/v8/android-arm/args.gn
-cd ../../
+cp ../J2V8/v8/android-arm/args.gn  out.gn/${build_platform}/args.gn
 ls -al out.gn/${build_platform}/
 cat out.gn/${build_platform}/args.gn
 touch out.gn/${build_platform}/args.gn
@@ -14,9 +12,7 @@ touch out.gn/${build_platform}/args.gn
 build_platform=android-arm64
 cp -r out.gn/x64.release out.gn/${build_platform}
 rm out.gn/${build_platform}/args.gn
-cd out.gn/${build_platform}/
-wget https://raw.githubusercontent.com/jinhan1414/J2V8/master/v8/android-arm64/args.gn
-cd ../../
+cp ../J2V8/v8/android-arm64/args.gn  out.gn/${build_platform}/args.gn
 ls -al out.gn/${build_platform}/
 cat out.gn/${build_platform}/args.gn
 touch out.gn/${build_platform}/args.gn
@@ -25,9 +21,7 @@ touch out.gn/${build_platform}/args.gn
 build_platform=android-x86
 cp -r out.gn/x64.release out.gn/${build_platform}
 rm out.gn/${build_platform}/args.gn
-cd out.gn/${build_platform}/
-wget https://raw.githubusercontent.com/jinhan1414/J2V8/master/v8/android-ia32/args.gn
-cd ../../
+cp ../J2V8/v8/android-ia32/args.gn  out.gn/${build_platform}/args.gn
 ls -al out.gn/${build_platform}/
 cat out.gn/${build_platform}/args.gn
 touch out.gn/${build_platform}/args.gn
@@ -36,9 +30,7 @@ touch out.gn/${build_platform}/args.gn
 build_platform=android-x64
 cp -r out.gn/x64.release out.gn/${build_platform}
 rm out.gn/${build_platform}/args.gn
-cd out.gn/${build_platform}/
-wget https://raw.githubusercontent.com/jinhan1414/J2V8/master/v8/android-x64/args.gn
-cd ../../
+cp ../J2V8/v8/android-x64/args.gn  out.gn/${build_platform}/args.gn
 ls -al out.gn/${build_platform}/
 cat out.gn/${build_platform}/args.gn
 touch out.gn/${build_platform}/args.gn
