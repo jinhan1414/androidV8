@@ -1,3 +1,5 @@
+aliyun_username=xxxx
+aliyun_password=xxxx
 matrix.image-name=android-v8-build-env
 matrix.image-version=2.0
 mkdir dock
