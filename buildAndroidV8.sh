@@ -56,3 +56,32 @@ ninja -C out.gn/${build_platform} v8_monolith
 build_platform=android-x64
 ninja -C out.gn/${build_platform} -t clean
 ninja -C out.gn/${build_platform} v8_monolith
+
+# 生成构建压缩包
+echo "构建完成，生成压缩包"
+cd ../
+rm -rf libv8_monolith
+mkdir libv8_monolith
+cd libv8_monolith
+
+build_platform=android-arm
+mkdir ${build_platform}
+cp ../v8/out.gn/${build_platform}/obj/v8_monolith.a ${build_platform}/v8_monolith.a
+
+build_platform=android-arm64
+mkdir ${build_platform}
+cp ../v8/out.gn/${build_platform}/obj/v8_monolith.a ${build_platform}/v8_monolith.a
+
+build_platform=android-x86
+mkdir ${build_platform}
+cp ../v8/out.gn/${build_platform}/obj/v8_monolith.a ${build_platform}/v8_monolith.a
+
+build_platform=android-x64
+mkdir ${build_platform}
+cp ../v8/out.gn/${build_platform}/obj/v8_monolith.a ${build_platform}/v8_monolith.a
+
+cp -r ../v8/include ./include
+
+zip -q -r libv8_monolith.zip *
+echo "构建完成压缩包完成"
+echo "路径："+`pwd`+"libv8_monolith.zip"
