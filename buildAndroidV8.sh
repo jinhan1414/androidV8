@@ -9,9 +9,6 @@ cd ../../
 ls -al out.gn/${build_platform}/
 cat out.gn/${build_platform}/args.gn
 touch out.gn/${build_platform}/args.gn
-# Build the V8 monolithic static liblary
-ninja -C out.gn/${build_platform} -t clean
-ninja -C out.gn/${build_platform} v8_monolith
 
 # android-arm64
 build_platform=android-arm64
@@ -23,9 +20,6 @@ cd ../../
 ls -al out.gn/${build_platform}/
 cat out.gn/${build_platform}/args.gn
 touch out.gn/${build_platform}/args.gn
-# Build the V8 monolithic static liblary
-ninja -C out.gn/${build_platform} -t clean
-ninja -C out.gn/${build_platform} v8_monolith
 
 # android-x86
 build_platform=android-x86
@@ -37,9 +31,6 @@ cd ../../
 ls -al out.gn/${build_platform}/
 cat out.gn/${build_platform}/args.gn
 touch out.gn/${build_platform}/args.gn
-# Build the V8 monolithic static liblary
-ninja -C out.gn/${build_platform} -t clean
-ninja -C out.gn/${build_platform} v8_monolith
 
 # android-x64
 build_platform=android-x64
@@ -51,6 +42,25 @@ cd ../../
 ls -al out.gn/${build_platform}/
 cat out.gn/${build_platform}/args.gn
 touch out.gn/${build_platform}/args.gn
+
 # Build the V8 monolithic static liblary
+build_platform=android-arm
+ninja -C out.gn/${build_platform} -t clean
+ninja -C out.gn/${build_platform} v8_monolith
+
+# Build the V8 monolithic static liblary
+build_platform=android-arm64
+ninja -C out.gn/${build_platform} -t clean
+ninja -C out.gn/${build_platform} v8_monolith
+
+
+# Build the V8 monolithic static liblary
+build_platform=android-x86
+ninja -C out.gn/${build_platform} -t clean
+ninja -C out.gn/${build_platform} v8_monolith
+
+
+# Build the V8 monolithic static liblary
+build_platform=android-x64
 ninja -C out.gn/${build_platform} -t clean
 ninja -C out.gn/${build_platform} v8_monolith
