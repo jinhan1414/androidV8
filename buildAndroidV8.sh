@@ -66,19 +66,19 @@ cd libv8_monolith
 
 build_platform=android-armeabi-v7a
 mkdir ${build_platform}
-cp ../v8/out.gn/${build_platform}/obj/v8_monolith.a ${build_platform}/v8_monolith.a
+cp ../v8/out.gn/${build_platform}/obj/libv8_monolith.a ${build_platform}/libv8_monolith.a
 
 build_platform=android-arm64-v8a
 mkdir ${build_platform}
-cp ../v8/out.gn/${build_platform}/obj/v8_monolith.a ${build_platform}/v8_monolith.a
+cp ../v8/out.gn/${build_platform}/obj/libv8_monolith.a ${build_platform}/libv8_monolith.a
 
 build_platform=android-x86
 mkdir ${build_platform}
-cp ../v8/out.gn/${build_platform}/obj/v8_monolith.a ${build_platform}/v8_monolith.a
+cp ../v8/out.gn/${build_platform}/obj/libv8_monolith.a ${build_platform}/libv8_monolith.a
 
 build_platform=android-x86_64
 mkdir ${build_platform}
-cp ../v8/out.gn/${build_platform}/obj/v8_monolith.a ${build_platform}/v8_monolith.a
+cp ../v8/out.gn/${build_platform}/obj/libv8_monolith.a ${build_platform}/libv8_monolith.a
 
 cp -r ../v8/include ./include
 
