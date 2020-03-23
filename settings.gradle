@@ -1,0 +1,3 @@
+rootProject.name='AndroidV8'
+include ':app'
+include ':androidv8library'
