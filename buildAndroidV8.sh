@@ -38,8 +38,8 @@ touch out.gn/${build_platform}/args.gn
 # Build the V8 monolithic static liblary
 echo "开始构建android-armeabi-v7a"
 build_platform=android-armeabi-v7a
-ninja -C -j 6 out.gn/${build_platform} -t clean
-ninja -C -j 6 out.gn/${build_platform} v8_monolith
+ninja -j 6 -C  out.gn/${build_platform} -t clean
+ninja -j 6 -C  out.gn/${build_platform} v8_monolith
 
 # Build the V8 monolithic static liblary
 echo "开始构建android-arm64-v8a"
