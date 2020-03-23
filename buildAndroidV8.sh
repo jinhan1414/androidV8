@@ -44,22 +44,22 @@ ninja -C -j 6 out.gn/${build_platform} v8_monolith
 # Build the V8 monolithic static liblary
 echo "开始构建android-arm64-v8a"
 build_platform=android-arm64-v8a
-ninja -C -j 6 out.gn/${build_platform} -t clean
-ninja -C -j 6 out.gn/${build_platform} v8_monolith
+ninja -j 6 -C  out.gn/${build_platform} -t clean
+ninja -j 6 -C  out.gn/${build_platform} v8_monolith
 
 
 # Build the V8 monolithic static liblary
 build_platform=android-x86
 echo "开始构建android-x86"
-ninja -C -j 6 out.gn/${build_platform} -t clean
-ninja -C -j 6 out.gn/${build_platform} v8_monolith
+ninja -j 6 -C  out.gn/${build_platform} -t clean
+ninja -j 6 -C out.gn/${build_platform} v8_monolith
 
 
 # Build the V8 monolithic static liblary
 echo "开始构建android-x86_64"
 build_platform=android-x86_64
-ninja -C -j 6 out.gn/${build_platform} -t clean
-ninja -C -j 6 out.gn/${build_platform} v8_monolith
+ninja -j 6 -C  out.gn/${build_platform} -t clean
+ninja -j 6 -C  out.gn/${build_platform} v8_monolith
 
 # 生成构建压缩包
 echo "构建完成，生成压缩包"
