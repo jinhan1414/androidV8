@@ -5,10 +5,10 @@ cp -r out.gn/x64.release out.gn/${build_platform}
 rm out.gn/${build_platform}/args.gn
 cd out.gn/${build_platform}/
 wget https://raw.githubusercontent.com/jinhan1414/J2V8/master/v8/android-arm/args.gn
+cd ../../
 ls -al out.gn/${build_platform}/
 cat out.gn/${build_platform}/args.gn
 touch out.gn/${build_platform}/args.gn
-
 # Build the V8 monolithic static liblary
 ninja -C out.gn/${build_platform} -t clean
 ninja -C out.gn/${build_platform} v8_monolith
