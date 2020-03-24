@@ -7,6 +7,8 @@ ARG vendor=debian
 ARG target_os=android
 ARG target_cpu=x64
 
+ARG v8_version=8.0.426.28
+
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Update depedency of V8
@@ -48,7 +50,7 @@ RUN echo ${path_to_args}
 # Fetch V8 code
 RUN fetch v8
 WORKDIR /v8build/v8
-RUN git checkout 8.0.426.28
+RUN git checkout ${v8_version}
 WORKDIR /v8build
 
 RUN echo "target_os= ['${target_os}']">>.gclient
@@ -62,7 +64,7 @@ RUN echo y | \
 	else \
 		./build/install-build-deps.sh ; fi
 
-RUN git pull origin 8.0.426
+RUN git pull origin ${v8_version}
 RUN gclient sync
 
 RUN wget https://raw.githubusercontent.com/jinhan1414/androidV8/master/buildAndroidV8.sh
