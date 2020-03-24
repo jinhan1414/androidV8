@@ -88,4 +88,4 @@ cp -r ../v8/include ./include
 
 zip -q -r libv8_monolith.zip *
 echo "构建完成压缩包完成"
-echo "路径："+`pwd`+"libv8_monolith.zip"
+echo "压缩包路径：`pwd`/libv8_monolith.zip"
