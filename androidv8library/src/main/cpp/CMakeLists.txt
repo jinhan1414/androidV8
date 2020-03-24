@@ -6,6 +6,7 @@
 cmake_minimum_required(VERSION 3.4.1)
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
+include_directories(${CMAKE_SOURCE_DIR}/include/v8)
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.
 # You can define multiple libraries, and CMake builds them for you.
@@ -19,7 +20,7 @@ add_library(
         IMPORTED)
 set_target_properties(v8_monolith
         PROPERTIES IMPORTED_LOCATION
-        ${CMAKE_SOURCE_DIR}/jniLibs/android.${ANDROID_ABI}/libv8_monolith.a)
+        ${CMAKE_SOURCE_DIR}/jniLibs/android-${ANDROID_ABI}/libv8_monolith.a)
 
 add_library( # Sets the name of the library.
         androidV8-lib
