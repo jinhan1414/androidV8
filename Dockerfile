@@ -48,7 +48,7 @@ RUN echo ${path_to_args}
 # Fetch V8 code
 RUN fetch v8
 WORKDIR /v8build/v8
-RUN git checkout 8.0.426
+RUN git checkout 8.0.426.28
 WORKDIR /v8build
 
 RUN echo "target_os= ['${target_os}']">>.gclient
