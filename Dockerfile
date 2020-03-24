@@ -66,3 +66,4 @@ RUN git pull origin 8.0.426
 RUN gclient sync
 
 RUN wget https://raw.githubusercontent.com/jinhan1414/androidV8/master/buildAndroidV8.sh
+RUN chmod u+x buildAndroidV8.sh
