@@ -27,6 +27,8 @@ docker pull registry.cn-chengdu.aliyuncs.com/jinchengsong001/android_v8:xxx
 . 第四步 编译v8引擎
 ```
 1、启动docker镜像
-
+docker images
+docker run -itd --name androidV8 android_v8:xxx
+docker exec -it  androidV8 /bin/bash
 2、执行buildAndroidV8.sh
 ```
